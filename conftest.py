@@ -8,20 +8,8 @@ from utilities.test_data import TestData
 def initialize_driver():
     driver = webdriver.Chrome()
     print("Using Chrome")
-    driver.get(TestData.url)
+    driver.get(TestData.URL)
     driver.maximize_window()
     yield driver
     print("Closing driver")
     driver.close()
-
-# @pytest.fixture(params="chrome")
-# def initialize_driver(request):
-#     if request.param == "chrome":
-#         driver = webdriver.Chrome()
-#         request.cls.driver = driver
-#     print("Using Chrome")
-#     driver.get(TestData.url)
-#     driver.maximize_window()
-#     yield
-#     print("Closing driver")
-#     driver.close()
