@@ -1,4 +1,3 @@
-from selenium import webdriver
 from utilities.locators import BasePageLocators
 
 
@@ -21,6 +20,9 @@ class BasePage:
 
     def get_text(self, *locator):
         return self.find(*locator).text
+
+    def get_title(self):
+        return self.driver.title
 
     def go_to_cart(self):
         self.find(BasePageLocators.cart_icon).click()
