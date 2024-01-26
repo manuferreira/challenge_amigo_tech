@@ -10,3 +10,5 @@ class TestLogin:
         login_page.set_username(TestData.USERNAME)
         login_page.set_password(TestData.PASSWORD)
         login_page.click_to_login()
+        actual_title = login_page.get_title()
+        assert actual_title == "Swag Labs"
