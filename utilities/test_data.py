@@ -1,5 +1,5 @@
 
 class TestData:
-    url = "https://www.saucedemo.com/"
-    username = "standard_user"
-    password = "secret_sauce"
+    URL = "https://www.saucedemo.com/"
+    USERNAME = "standard_user"
+    PASSWORD = "secret_sauce"
