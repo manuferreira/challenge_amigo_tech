@@ -15,7 +15,6 @@ class BasePage:
         self.find(*locator).click()
 
     def set(self, locator, value):
-        # self.find(*locator).clear()
         self.find(*locator).send_keys(value)
 
     def get_text(self, *locator):
