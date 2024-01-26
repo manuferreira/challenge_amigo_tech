@@ -4,9 +4,6 @@ from utilities.locators import CartLocators
 
 
 class CartPage(Homepage):
-    """
-    Utilizando herança múltipla
-    """
     def __int__(self, webdriver):
         super().__init__(webdriver)
         self.remove_inside_cart_button = CartLocators.remove_product_button
