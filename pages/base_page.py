@@ -1,3 +1,4 @@
+from selenium import webdriver
 from utilities.locators import BasePageLocators
 
 
@@ -10,6 +11,9 @@ class BasePage:
 
     def find(self, *locator):
         return self.webdriver.find_element(*locator)
+
+    def find_elements(self, *locator):
+        return self.webdriver.find_elements(*locator)
 
     def click(self, locator):
         self.find(*locator).click()
