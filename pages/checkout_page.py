@@ -1,11 +1,11 @@
 from selenium.webdriver.common.by import By
-from base_page import BasePage
+from pages.base_page import BasePage
 from utilities.locators import CheckoutLocators
 
 
 class CheckoutPage(BasePage):
-    def __int__(self, webdriver):
-        super().__init__(webdriver)
+    def __int__(self, driver):
+        super().__init__(driver)
         self.first_name = (By.ID, 'first-name')
         self.last_name = (By.ID, 'last-name')
         self.zip_code = (By.ID, 'postal-code')
