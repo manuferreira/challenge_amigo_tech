@@ -1,5 +1,5 @@
 from selenium.webdriver.common.by import By
-from home_page import Homepage
+from pages.home_page import Homepage
 from utilities.locators import CartLocators
 
 
