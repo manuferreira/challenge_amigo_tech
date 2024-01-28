@@ -1,6 +1,7 @@
 from utilities.locators import BasePageLocators
 
 
+
 class BasePage:
     def __init__(self, driver):
         self.driver = driver
@@ -24,4 +25,5 @@ class BasePage:
         return self.driver.title
 
     def go_to_cart(self):
-        self.find(BasePageLocators.cart_icon).click()
+        self.find(*BasePageLocators.cart_icon).click()
+
