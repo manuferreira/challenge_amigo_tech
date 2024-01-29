@@ -53,8 +53,9 @@ Python 3.12.1 is having some issues related to packages not being installed, the
 
 Example: pytest -k TestCartPage
 
-## Why Python + Selenium + Pytest?
+## Why Python + Selenium + Pytest + Page Object Model?
 - Python is easy to use and easy to setup
 - Selenium it's the framework that I have more knowledge of working with
 - Pytest is a framework simple and easy to use, it also has the fixture functionality that lets us work sharing resources between the tests
+- I developed the automation following the Page Object Model because I believe is very organized and easy to maintain the code 
 
