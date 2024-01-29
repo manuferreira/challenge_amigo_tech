@@ -27,3 +27,5 @@ class BasePage:
     def go_to_cart(self):
         self.find(*BasePageLocators.cart_icon).click()
 
+    def go_back(self):
+        self.driver.back()
