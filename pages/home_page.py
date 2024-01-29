@@ -10,7 +10,7 @@ class Homepage(BasePage):
         self.product_description = (By.CLASS_NAME, 'inventory_item_desc')
         self.add_button = ProductsLocators.product_button
         self.remove_button = ProductsLocators.product_button
-        self.product_title_link = ProductsLocators.product_name
+        self.product_title_link = ProductsLocators.product_name_home
 
     def get_product_title(self, index):
         all_products_t = self.find_elements(*self.product_title)
