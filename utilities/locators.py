@@ -2,7 +2,7 @@ from selenium.webdriver.common.by import By
 
 
 class Utilities:
-    pass
+    any_button = (By.XPATH, '//button[text()="{button_action}"]')
 
 class BasePageLocators:
     cart_icon = (By.XPATH, '//a[@class="shopping_cart_link"]')
@@ -10,8 +10,10 @@ class BasePageLocators:
 
 class ProductsLocators:
     product_button = (By.XPATH, '//div[@class="inventory_item_label"]/a/div[text()="{item_name}"]/../../following-sibling::div//button')
-    product_name = (By.XPATH, '//div[text()="{item_name}"]')
-
+    product_name = (By.XPATH, '//div[contains(@class, "inventory_details_name")]')
+    product_description = (By.XPATH, '//div[contains(@class, "inventory_details_desc ")]')
+    product_price = (By.CLASS_NAME, 'inventory_details_price')
+    product_name_home = (By.XPATH, '//div[contains(text(), "{item_name}")]')
 
 class CartLocators:
     remove_product_button = (By.XPATH, '//div[@class="cart_item_label"]/a/div[text()="{item_name}"]/../../div[@class="item_pricebar"]//button')
