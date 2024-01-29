@@ -10,6 +10,7 @@ class BasePageLocators:
 
 class ProductsLocators:
     product_button = (By.XPATH, '//div[@class="inventory_item_label"]/a/div[text()="{item_name}"]/../../following-sibling::div//button')
+    product_name = (By.XPATH, '//div[text()="{item_name}"]')
 
 
 class CartLocators:
