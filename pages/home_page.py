@@ -1,7 +1,7 @@
 from selenium.webdriver.common.by import By
 from pages.base_page import BasePage
 from utilities.locators import ProductsLocators
-
+from time import sleep
 
 class Homepage(BasePage):
     def __init__(self, driver):
@@ -10,6 +10,7 @@ class Homepage(BasePage):
         self.product_description = (By.CLASS_NAME, 'inventory_item_desc')
         self.add_button = ProductsLocators.product_button
         self.remove_button = ProductsLocators.product_button
+        self.product_title_link = ProductsLocators.product_name
 
     def get_product_title(self, index):
         all_products_t = self.find_elements(*self.product_title)
@@ -27,5 +28,6 @@ class Homepage(BasePage):
         remove_button_locator = self.remove_button[1].format(item_name=product_name)
         self.click((self.remove_button[0], remove_button_locator))
 
-
-
+    def go_to_product(self, product_name):
+        product_title_link_locator = self.product_title_link[1].format(item_name=product_name)
+        self.click((self.product_title_link[0], product_title_link_locator))
