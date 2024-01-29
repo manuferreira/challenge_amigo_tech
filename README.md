@@ -52,3 +52,9 @@ Python 3.12.1 is having some issues related to packages not being installed, the
     <code>pytest -k ClassName</code>
 
 Example: pytest -k TestCartPage
+
+## Why Python + Selenium + Pytest?
+- Python is easy to use and easy to setup
+- Selenium it's the framework that I have more knowledge of working with
+- Pytest is a framework simple and easy to use, it also has the fixture functionality that lets us work sharing resources between the tests
+
